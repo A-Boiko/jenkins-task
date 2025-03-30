@@ -8,7 +8,7 @@ pipeline {
     stages {
 	stage('Prepare') {
             steps {
-			echo 'Preparing..'
+		echo 'Preparing..'
                 script {
                     echo "Installing Node.js v${NODE_VERSION}"
                     sh 'node -v || curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt-get install -y nodejs'
@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				script {
+		script {
                     echo 'Checking npm version...'
                     sh 'npm -v'
                 }
@@ -27,7 +27,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-				script {
+		script {
                     echo 'Displaying JENKINS_URL...'
                     sh 'echo $JENKINS_URL'
                 }
