@@ -11,8 +11,8 @@ pipeline {
 		echo 'Preparing..'
                 script {
                     echo 'Installing Node.js version 22'
-                    sh 'curl -fsSL https://deb.nodesource.com/setup_22.x | bash -'
-                    sh 'apt-get install -y nodejs'
+		    sh 'curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -'
+            	    sh 'sudo apt-get install -y nodejs'
                 }
             }
         }
