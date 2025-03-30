@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-		stage('Prepare') {
+	stage('Prepare') {
             steps {
 			echo 'Preparing..'
                 script {
