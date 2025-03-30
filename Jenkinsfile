@@ -10,8 +10,9 @@ pipeline {
             steps {
 		echo 'Preparing..'
                 script {
-                    echo "Installing Node.js v${NODE_VERSION}"
-                    sh 'node -v || curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt-get install -y nodejs'
+                    echo 'Installing Node.js version 22'
+                    sh 'curl -fsSL https://deb.nodesource.com/setup_22.x | bash -'
+                    sh 'apt-get install -y nodejs'
                 }
             }
         }
